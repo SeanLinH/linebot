@@ -40,7 +40,7 @@ app = Flask(__name__)
 def linebot():
     body = request.get_data(as_text=True)
     json_data = json.loads(body)
-    API_KEY = open('key.txt', 'r').read()
+    API_KEY = open('key.txt', 'r').read()[:-2]
     try:
         line_bot_api = LineBotApi('WYXhQWYll5Elwbr/BkZu2SlwUy9AprC88LVLoNrAuJAfB3DbfsWn1I5av2shMKKcFf9CJdNjY0nN6nH09EM+R0Riuek1Z/LdgYP50bJ7xjmMPJk0PS/juq1AeB+n8un8O9fvzKhzzmr7Vj96ZisuygdB04t89/1O/w1cDnyilFU=')
         handler = WebhookHandler('e9ac54a45e76a8971b89053e358726fe')
