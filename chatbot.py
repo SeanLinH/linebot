@@ -76,7 +76,7 @@ def linebot():
             line_bot_api.reply_message(tk,text_message)
             print('cleared!!')
         elif ai_msg == '?':
-            openai.api_key = 'API_KEY'
+            openai.api_key = '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'
             # 將第六個字元之後的訊息發送給 OpenAI
             response = openai.ChatCompletion.create(
                 model= 'gpt-4', #'gpt-3.5-turbo-instruct', #'text-davinci-003',
