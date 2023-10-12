@@ -40,7 +40,7 @@ app = Flask(__name__)
 def linebot():
     body = request.get_data(as_text=True)
     json_data = json.loads(body)
-    
+    API_KEY = open('key.txt', 'r').read()
     try:
         line_bot_api = LineBotApi('WYXhQWYll5Elwbr/BkZu2SlwUy9AprC88LVLoNrAuJAfB3DbfsWn1I5av2shMKKcFf9CJdNjY0nN6nH09EM+R0Riuek1Z/LdgYP50bJ7xjmMPJk0PS/juq1AeB+n8un8O9fvzKhzzmr7Vj96ZisuygdB04t89/1O/w1cDnyilFU=')
         handler = WebhookHandler('e9ac54a45e76a8971b89053e358726fe')
@@ -76,7 +76,7 @@ def linebot():
             line_bot_api.reply_message(tk,text_message)
             print('cleared!!')
         elif ai_msg == '?':
-            openai.api_key = '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'
+            openai.api_key = API_KEY
             # 將第六個字元之後的訊息發送給 OpenAI
             response = openai.ChatCompletion.create(
                 model= 'gpt-4', #'gpt-3.5-turbo-instruct', #'text-davinci-003',
