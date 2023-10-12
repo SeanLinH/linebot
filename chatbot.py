@@ -71,7 +71,11 @@ def linebot():
             text_message = TextSendMessage(text='Your record has been cleared!')
             line_bot_api.reply_message(tk,text_message)
             print('cleared!!')
-        elif ai_msg == '/':
+        elif ai_msg =='/':
+            text_message = TextSendMessage(text='今天有點發燒，昨天太high 造成喉嚨沙啞，我已經跟老闆請假。或許晚點會復活~')
+            line_bot_api.reply_message(tk,text_message)
+            print('cleared!!')
+        elif ai_msg == '/error':
             openai.api_key = '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'
             # 將第六個字元之後的訊息發送給 OpenAI
             response = openai.ChatCompletion.create(
