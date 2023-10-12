@@ -135,8 +135,8 @@ def linebot():
         else:
             reply_msg = msg
         
-    except:
-        print('error')
+    except Exception as e:
+        print(e)
     return 'OK'
 
 if __name__ == "__main__":
