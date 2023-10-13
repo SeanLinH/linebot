@@ -32,6 +32,8 @@ def search_google(query):
         return '\n\n你不可以色色唷😚'
     elif 'xvideo' in text:
         return '\n\n你不可以色色唷😚'   
+    elif '士桓' in query:
+        return '\n\n這是我的LinkedIn:https://www.linkedin.com/in/seanlin-tw'
     return '\n\n幫你找找:' + text
 
 
