@@ -27,7 +27,7 @@ def search_google(query):
 
     if 'Sean' in query:
         return '\n\n很高興認識你! 這是我的LinkedIn:https://www.linkedin.com/in/seanlin-tw'
-    if 'KTV' in query:
+    if 'KTV' in query or 'ktv' in query:
         return '\n\n什麼是KTV:https://morningsteve.blogspot.com/2017/06/3-key-words-in-career-development.html'
     elif 'http' not in text:
         return ''
