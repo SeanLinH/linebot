@@ -86,6 +86,7 @@ def linebot():
             openai.api_key = API_KEY
             # 將第六個字元之後的訊息發送給 OpenAI
             if "ktv" in msg or "KTV" in msg:
+                print('KTV')
                 response = openai.ChatCompletion.create(
                     model= 'gpt-4', #'gpt-3.5-turbo-instruct', #'text-davinci-003',
                     temperature=0.9,
