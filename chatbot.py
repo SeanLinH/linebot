@@ -24,8 +24,10 @@ def search_google(query):
     text = text[text.find('<a jsname'):]
     text = text[text.find('href')+6:]
     text = text[:text.find('"')]
-    
-    if 'http' not in text:
+
+    if 'Sean' in query:
+        return '\n\n很高興認識你! 這是我的LinkedIn:https://www.linkedin.com/in/seanlin-tw'
+    elif 'http' not in text:
         return ''
     elif str(response) == "<Response [429]>":
         return '\n\n我累了🥵, 休息一下喝口水'
@@ -33,8 +35,6 @@ def search_google(query):
         return '\n\n你不可以色色唷😚'
     elif 'xvideo' in text:
         return '\n\n你不可以色色唷😚'   
-    elif 'Sean' in query:
-        return '\n\n這是我的LinkedIn:https://www.linkedin.com/in/seanlin-tw'
     return '\n\n幫你找找:' + text
 
 
