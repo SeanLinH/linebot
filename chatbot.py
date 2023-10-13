@@ -55,6 +55,7 @@ def linebot():
         handler.handle(body, signature)
         tk = json_data['events'][0]['replyToken']
         msg = json_data['events'][0]['message']['text'] + '.'
+        ai_msg = mgs[:1]
         user = json_data["events"][0]["source"]["userId"]
         # 取出文字的前五個字元，轉換成小寫
         reply_msg = ''
